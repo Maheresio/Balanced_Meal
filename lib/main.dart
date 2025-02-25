@@ -1,3 +1,5 @@
+import 'package:balanced_meal/core/themes/app_button_theme.dart';
+import 'package:balanced_meal/core/themes/app_themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,9 +21,7 @@ Future<void> main() async {
           onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
           child: MaterialApp.router(
             debugShowCheckedModeBanner: false,
-            theme: ThemeData.light().copyWith(
-              textTheme: GoogleFonts.poppinsTextTheme(),
-            ),
+            theme: AppThemes.lightTheme,
             routerConfig: AppRouter.router,
           ),
         );
