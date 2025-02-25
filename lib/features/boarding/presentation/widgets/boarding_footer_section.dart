@@ -1,8 +1,9 @@
-import 'package:balanced_meal/core/utils/app_colors.dart';
-import 'package:balanced_meal/core/utils/app_strings.dart';
-import 'package:balanced_meal/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/utils/app_styles.dart';
 
 class BoardingFooterSection extends StatelessWidget {
   const BoardingFooterSection({super.key});

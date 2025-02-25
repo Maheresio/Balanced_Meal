@@ -1,7 +1,8 @@
-import 'package:balanced_meal/core/utils/app_images.dart';
-import 'package:balanced_meal/features/boarding/presentation/widgets/boarding_footer_section.dart';
-import 'package:balanced_meal/features/boarding/presentation/widgets/boarding_header_section.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/utils/app_images.dart';
+import 'boarding_footer_section.dart';
+import 'boarding_header_section.dart';
 
 class BoardingViewBody extends StatelessWidget {
   const BoardingViewBody({super.key});

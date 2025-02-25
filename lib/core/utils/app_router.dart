@@ -1,5 +1,6 @@
-import 'package:balanced_meal/features/boarding/presentation/boarding_view.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../features/boarding/presentation/boarding_view.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';

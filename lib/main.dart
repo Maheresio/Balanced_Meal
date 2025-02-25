@@ -1,8 +1,6 @@
-import 'package:balanced_meal/core/themes/app_button_theme.dart';
-import 'package:balanced_meal/core/themes/app_themes.dart';
+import 'core/themes/app_themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'core/utils/app_router.dart';
 
