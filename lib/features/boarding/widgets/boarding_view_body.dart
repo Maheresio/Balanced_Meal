@@ -1,3 +1,4 @@
+import 'package:balanced_meal/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 
 class BoardingViewBody extends StatelessWidget {
@@ -5,6 +6,6 @@ class BoardingViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Stack(children: [Image.asset(AppImages.welcomeImage)]);
   }
 }
