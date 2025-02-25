@@ -1,4 +1,4 @@
-import 'package:balanced_meal/features/boarding/boarding_view.dart';
+import 'package:balanced_meal/features/boarding/presentation/boarding_view.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {

@@ -1,4 +1,4 @@
-import 'package:balanced_meal/features/boarding/widgets/boarding_view_body.dart';
+import 'package:balanced_meal/features/boarding/presentation/widgets/boarding_view_body.dart';
 import 'package:flutter/material.dart';
 
 class BoardingView extends StatelessWidget {
