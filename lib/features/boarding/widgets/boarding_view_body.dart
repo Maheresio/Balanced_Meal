@@ -2,6 +2,8 @@ import 'package:balanced_meal/core/utils/app_colors.dart';
 import 'package:balanced_meal/core/utils/app_images.dart';
 import 'package:balanced_meal/core/utils/app_strings.dart';
 import 'package:balanced_meal/core/utils/app_styles.dart';
+import 'package:balanced_meal/features/boarding/widgets/boarding_footer_section.dart';
+import 'package:balanced_meal/features/boarding/widgets/boarding_header_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,60 +21,13 @@ class BoardingViewBody extends StatelessWidget {
             fit: StackFit.expand,
             children: [
               Image.asset(AppImages.welcomeImage, fit: BoxFit.cover),
-              Align(
+              const Align(
                 alignment: Alignment.topCenter,
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.only(
-                    top: 40,
-                    start: 25,
-                    end: 25,
-                  ),
-                  child: Text(
-                    AppStrings.kBalancedMeal,
-                    style: AppStyles.textStyleExtraBold48,
-                  ),
-                ),
+                child: BoardingHeaderSection(),
               ),
-              Align(
+              const Align(
                 alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.only(
-                    bottom: 43,
-                    start: 25,
-                    end: 25,
-                  ),
-                  child: Column(
-                    spacing: 30,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        AppStrings.kCraftYourMeal,
-                        textAlign: TextAlign.center,
-                        style: AppStyles.textStyleLight20,
-                      ),
-
-                      SizedBox(
-                        width: double.infinity,
-                        height: 52.h,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.kPrimaryColor,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12.r),
-                            ),
-                          ),
-                          onPressed: () {},
-                          child: Text(
-                            AppStrings.kOrderFood,
-                            style: AppStyles.textStyleMedium16.copyWith(
-                              color: AppColors.kWhiteColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                child: BoardingFooterSection(),
               ),
             ],
           ),
