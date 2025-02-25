@@ -5,26 +5,46 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:balanced_meal/features/boarding/presentation/boarding_view.dart';
+import 'package:balanced_meal/core/utils/app_strings.dart';
+import 'package:balanced_meal/features/boarding/presentation/widgets/boarding_view_body.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const BoardingView());
+  testWidgets('BoardingViewBody renders correctly', (
+    WidgetTester tester,
+  ) async {
+    // Build the widget
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Builder(
+          builder: (context) {
+            // Initialize ScreenUtil
+            ScreenUtil.init(
+              context,
+              designSize: const Size(375, 812), // Replace with your design size
+              minTextAdapt: true,
+              splitScreenMode: true,
+            );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+            return const BoardingViewBody();
+          },
+        ),
+      ),
+    );
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Verify the background image is displayed
+    expect(find.byType(Image), findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify the title text is displayed
+    expect(find.text(AppStrings.kBalancedMeal), findsOneWidget);
+
+    // Verify the subtitle text is displayed
+    expect(find.text(AppStrings.kCraftYourMeal), findsOneWidget);
+
+    // Verify the button is displayed
+    expect(find.byType(ElevatedButton), findsOneWidget);
+    expect(find.text(AppStrings.kOrderFood), findsOneWidget);
   });
 }
