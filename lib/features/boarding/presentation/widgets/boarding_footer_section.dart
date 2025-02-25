@@ -24,12 +24,6 @@ class BoardingFooterSection extends StatelessWidget {
             width: double.infinity,
             height: 52.h,
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.kPrimaryColor,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12.r),
-                ),
-              ),
               onPressed: () {},
               child: Text(
                 AppStrings.kOrderFood,
