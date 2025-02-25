@@ -20,7 +20,7 @@ Future<void> main() async {
           child: MaterialApp.router(
             debugShowCheckedModeBanner: false,
             theme: ThemeData.light().copyWith(
-              textTheme: GoogleFonts.dmSansTextTheme(),
+              textTheme: GoogleFonts.poppinsTextTheme(),
             ),
             routerConfig: AppRouter.router,
           ),
